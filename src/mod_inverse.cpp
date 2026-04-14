@@ -25,7 +25,7 @@ int extended_euclid(int a, int b, int &x, int &y) {
     return g;
 }
 
-iint mod_inverse(int a, int m) {
+int mod_inverse(int a, int m) {
     int x, y;
     int g = extended_euclid(a, m, x, y);
     if (g != 1) {
