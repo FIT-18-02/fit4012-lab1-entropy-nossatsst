@@ -25,14 +25,14 @@ int extended_euclid(int a, int b, int &x, int &y) {
     return g;
 }
 
-int mod_inverse(int a, int m) {
+iint mod_inverse(int a, int m) {
     int x, y;
     int g = extended_euclid(a, m, x, y);
     if (g != 1) {
         return -1; 
-    } else {
-        return (x % m + m) % m;
     }
+    int result = (x % m + m) % m;
+    return result; 
 }
 
 int main() {
